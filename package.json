@@ -1,0 +1,23 @@
+{
+  "name": "paymentsystem",
+  "version": "1.0.0",
+  "description": "- This is a simple Payment System in Node.js and MongoDB Using Paystack. - It encompasses API endpoints for payment integration on Paystack which can be used for client side applications. - It helps monetize apps with Paystack using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2",
+    "paystack-api": "^2.0.6"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.4.1",
+    "nodemon": "^3.1.7"
+  }
+}
