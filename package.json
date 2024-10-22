@@ -4,6 +4,8 @@
   "description": "- This is a simple Payment System in Node.js and MongoDB Using Paystack. - It encompasses API endpoints for payment integration on Paystack which can be used for client side applications. - It helps monetize apps with Paystack using Node.js",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
+    "dev":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
