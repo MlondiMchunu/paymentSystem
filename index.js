@@ -10,3 +10,7 @@ app.use(express.json())
 app.get('/',async(req,res)=>{
     res.send("Hello Payment")
 })
+
+app.listen(PORT,()=>{
+    console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`)
+})
