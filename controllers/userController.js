@@ -68,6 +68,8 @@ const initializeTrans = async(req,res)=>{
             status: response.status
         })
     
+    }catch(error){
+        res.status(400).send({data: {}, error: `${error.message}`, status: 1})
     }
 }
 
