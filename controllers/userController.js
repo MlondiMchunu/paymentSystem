@@ -44,6 +44,16 @@ const getUsers = async(req,res)=>{
    
 }
 
+//initialize transaction
+const initializeTrans = async(req,res)=>{
+    try{
+        let { id } = req.params
+        const { email, amount, plan } = req.body
+
+    
+    }
+}
+
 module.exports = {
     createUser,
     getUser,
