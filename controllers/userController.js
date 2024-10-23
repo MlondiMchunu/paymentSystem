@@ -50,6 +50,11 @@ const initializeTrans = async(req,res)=>{
         let { id } = req.params
         const { email, amount, plan } = req.body
 
+        const response = await paystack.transaction.initialize({
+            email,
+            amount,
+            plan //optional but, used for subscrription
+        })
     
     }
 }
