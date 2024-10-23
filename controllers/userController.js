@@ -1,4 +1,6 @@
 const User = require('../models/userModel')
+require('dotenv').configure()
+const paystack = require('paystack-api')(process.env.TEST_SECRET)
 
 const createUser = async(req,res)=>{
     let {email,fullname} = req.body
