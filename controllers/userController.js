@@ -53,8 +53,14 @@ const initializeTrans = async(req,res)=>{
         const response = await paystack.transaction.initialize({
             email,
             amount,
-            plan //optional but, used for subscrription
+            plan //optional but, used for subscription
         })
+
+        const data = {
+            paystack_ref: response.data.reference
+        }
+
+        await User.findByIdAndUpdate(id, data)
     
     }
 }
