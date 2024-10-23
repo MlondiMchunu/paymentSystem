@@ -1,4 +1,4 @@
-POST http://localhost:8000/users/transact/:id
+POST http://localhost:8000/users/transact/2
 Content-Type : application/json
 
 {

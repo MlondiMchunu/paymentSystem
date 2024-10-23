@@ -1,5 +1,5 @@
 const User = require('../models/userModel')
-require('dotenv').configure()
+require('dotenv').config()
 const paystack = require('paystack-api')(process.env.TEST_SECRET)
 
 const createUser = async(req,res)=>{
@@ -47,7 +47,7 @@ const getUsers = async(req,res)=>{
 //initialize transaction
 const initializeTrans = async(req,res)=>{
     try{
-        let { id } = req.params
+        let { id } = req.params.id
         const { email, amount, plan } = req.body
 
         const response = await paystack.transaction.initialize({
