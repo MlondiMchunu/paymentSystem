@@ -5,7 +5,7 @@ const app = express()
 
 require('dotenv').config()
 
-const connectDB = require('./config/db')
+const connectDB = require('./config/db.js')
 
 //specify  port from environment variable
 const PORT = process.env.PORT ||8080
@@ -22,3 +22,5 @@ app.get('/',async(req,res)=>{
 app.listen(PORT,()=>{
     console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`)
 })
+//connect to database
+connectDB()
