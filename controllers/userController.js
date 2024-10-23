@@ -29,3 +29,8 @@ const getUser = async(req,res)=>{
         res.status(500).send({data:{}, error: err.message, status: 1})
     }
 }
+
+module.exports = {
+    createUser,
+    getUser,
+}
