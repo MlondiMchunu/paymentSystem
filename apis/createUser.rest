@@ -1,0 +1,8 @@
+POST http://localhost:8000/users/createUser
+Content-Type: application/json
+
+{
+    "email":"dr.strange@marvel.com",
+    "fullname":"dr strange"
+    
+}
