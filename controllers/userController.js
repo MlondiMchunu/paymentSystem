@@ -14,3 +14,18 @@ const createUser = async(req,res)=>{
         status: 0,
     })
 }
+
+const getUser = async(req,res)=>{
+    try{
+        let {id} = req.params
+        const user = await User.findById(id)
+
+        res.status(200).send({
+            user,
+            message: "Found user Details",
+            status: 0,
+        })
+    }catch(err){
+        res.status(500).send({data:{}, error: err.message, status: 1})
+    }
+}
