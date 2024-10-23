@@ -5,10 +5,14 @@ const app = express()
 
 require('dotenv').config()
 
+const connectDB = require('./config/db')
+
 //specify  port from environment variable
 const PORT = process.env.PORT ||8080
 app.use(cors())
 app.use(express.json())
+
+
 
 app.get('/',async(req,res)=>{
    // res.send("Hello Payment")
