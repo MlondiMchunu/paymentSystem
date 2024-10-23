@@ -7,4 +7,10 @@ const createUser = async(req,res)=>{
         fullname,email,
     })
     await user.save()
+
+    res.status(201).send({
+        data: user,
+        message: "User created succesfully",
+        status: 0,
+    })
 }
