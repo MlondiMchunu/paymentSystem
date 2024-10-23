@@ -76,5 +76,6 @@ const initializeTrans = async(req,res)=>{
 module.exports = {
     createUser,
     getUser,
-    getUsers
+    getUsers,
+    initializeTrans
 }
