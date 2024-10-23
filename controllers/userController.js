@@ -61,6 +61,12 @@ const initializeTrans = async(req,res)=>{
         }
 
         await User.findByIdAndUpdate(id, data)
+
+        res.status(200).send({
+            data:response.data,
+            message: response.message,
+            status: response.status
+        })
     
     }
 }
