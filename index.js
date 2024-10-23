@@ -7,6 +7,8 @@ require('dotenv').config()
 
 const connectDB = require('./config/db.js')
 
+const {userRoute} = require('./routes/userRoutes')
+
 //specify  port from environment variable
 const PORT = process.env.PORT ||8080
 app.use(cors())
