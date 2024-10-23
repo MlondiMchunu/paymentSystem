@@ -1,7 +1,9 @@
 const express = require('express')
-const dotenv = require('dotenv')
+//const dotenv = require('dotenv')
 const cors = require('cors')
 const app = express()
+
+require('dotenv').config()
 
 //specify  port from environment variable
 const PORT = process.env.PORT ||8080
