@@ -2,6 +2,6 @@ POST http://localhost:8000/users/transact/2
 Content-Type : application/json
 
 {
-    "email":"firsttest@gmail.com",
+    "email":"mlondiemchunu1@gmail.com",
     "amount":50000
 }
