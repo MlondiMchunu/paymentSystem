@@ -8,11 +8,15 @@ const createUser = async(req,res)=>{
     })
     await user.save()
 
+    //res.json(user)
+
     res.status(201).send({
         data: user,
         message: "User created succesfully",
         status: 0,
     })
+
+    
 }
 
 const getUser = async(req,res)=>{
@@ -30,7 +34,16 @@ const getUser = async(req,res)=>{
     }
 }
 
+const getUsers = async(req,res)=>{
+    
+        const user = await User.find({})
+
+        res.json(user)
+   
+}
+
 module.exports = {
     createUser,
     getUser,
+    getUsers
 }
