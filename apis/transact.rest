@@ -1,0 +1,7 @@
+POST http://localhost:8000/users/transact/:id
+Content-Type : application/json
+
+{
+    "email":"firsttest@gmail.com",
+    "amount":50000
+}
