@@ -3,5 +3,5 @@ Content-Type : application/json
 
 {
     "email":"mlondiemchunu1@gmail.com",
-    "amount":50000 //This will be R500.00
+    "amount":50000  
 }
