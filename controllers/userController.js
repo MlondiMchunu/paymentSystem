@@ -94,6 +94,23 @@ const verifyTrans = async(req, res)=>{
                 paystack_ref: response.data.status,
                 amountDonated: response.data.amount,              
             }
+            await User.findByIdAndUpdate(id, data)
+
+            return res
+                .status(200)
+                .send({
+                    data: response.data,
+                    message: response.message,
+                    status: response.status,
+                })
+        }else{
+            return res
+                .status(200)
+                .send({
+                    data: response.data,
+                    message: response.message,
+                    status: response.status,
+                })
         }
     }catch(error){
         res.status(400).send({data: {}, error: `${error.message}`})
