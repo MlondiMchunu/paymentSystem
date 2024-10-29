@@ -73,6 +73,21 @@ const initializeTrans = async(req,res)=>{
     }
 }
 
+//verify transaction
+const verifyTrans = async(req, res)=>{
+    try{
+        let { id } = req.params
+
+        const user = await User.findById(id)
+
+        if(user.paystack_ref == "success")
+            return res.status(401).send({
+        })
+    }catch(error){
+        res.status(400).send({data: {}, error: `${error.message}`})
+    }
+}
+
 module.exports = {
     createUser,
     getUser,
