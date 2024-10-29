@@ -86,6 +86,15 @@ const verifyTrans = async(req, res)=>{
                 message: "Transaction has been verified",
                 status: 1,
         })
+        const response = await paystack.transaction.verify({
+            reference: user.paystack_ref
+        })
+        if(response.data.status == "success"){
+            const data = {
+                paystack_ref: response.data.status,
+                amountDonated: response.data.amount,              
+            }
+        }
     }catch(error){
         res.status(400).send({data: {}, error: `${error.message}`})
     }
