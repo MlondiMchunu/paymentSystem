@@ -121,5 +121,6 @@ module.exports = {
     createUser,
     getUser,
     getUsers,
-    initializeTrans
+    initializeTrans,
+    verifyTrans,
 }
