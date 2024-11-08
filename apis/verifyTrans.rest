@@ -1,0 +1,1 @@
+POST http://localhost:8000/users/verifyTrans/6hbnh9gl1z
